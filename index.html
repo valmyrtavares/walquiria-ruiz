@@ -16,8 +16,8 @@
   <meta property="og:image" content="./WalquiriaRuiz.jpeg">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="./WalquiriaRuiz.jpeg">
-  <link rel="apple-touch-icon" href="./WalquiriaRuiz.jpeg">
+  <link rel="icon" type="image/png" href="./emblem_hq.png">
+  <link rel="apple-touch-icon" href="./emblem_hq.png">
   
   <!-- Google Fonts: Cormorant Garamond (Alta Costura) & Montserrat (Minimalismo Moderno) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,8 @@
   <!-- ==================== HEADER & LUXURY NAV ==================== -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrapper">
-      <a href="#home" class="brand-link" aria-label="Walquiria Ruiz Atelier - Início">
-        <img src="./WalquiriaRuiz.jpeg" alt="Logotipo Walquiria Ruiz Atelier" class="brand-logo-img">
+      <a href="#home" class="brand-link" id="headerBrandLink" aria-label="Walquiria Ruiz Atelier - Início">
+        <img src="./emblem_hq.png" alt="Monograma Walquiria Ruiz" class="brand-emblem-mini">
         <div class="brand-text">
           <span class="brand-title">Walquiria Ruiz</span>
           <span class="brand-tagline">Atelier & Alfaiataria</span>
@@ -104,54 +104,64 @@
   </div>
 
   <main>
-    <!-- ==================== HERO SECTION (FULL SCREEN) ==================== -->
+    <!-- ==================== HERO / FRONT SECTION ==================== -->
     <section class="hero-section" id="home">
-      <div class="hero-background">
-        <!-- Imagem editorial de modelo em alta costura com corte impecável -->
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85" 
-             alt="Editorial de moda alta costura e alfaiataria" 
-             class="hero-bg-img" 
-             id="heroBgImage">
-        <div class="hero-overlay"></div>
+      
+      <!-- Parallax subtle background monogram watermark -->
+      <div class="parallax-watermark" data-parallax="0.18" style="top: 15%; right: 5%; width: 220px; height: 220px;">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13 7L12 22L11 7L12 2Z"/>
+        </svg>
       </div>
 
       <div class="container hero-content">
-        <div class="hero-logo-badge">
-          <img src="./WalquiriaRuiz.jpeg" alt="Walquiria Ruiz Atelier" class="hero-logo-img">
+        
+        <!-- 1. O Desenho / Monograma (Quadrado Vermelho): Valorizado e Imponente na Largura -->
+        <div class="hero-emblem-wrap" data-parallax="0.10">
+          <img src="./emblem_hq.png" 
+               alt="Monograma W Walquiria Ruiz com agulha e terno de alfaiataria" 
+               class="hero-emblem-img"
+               id="heroEmblem">
         </div>
 
-        <span class="eyebrow">Haute Couture & Bespoke Tailoring</span>
-        
-        <h1 class="hero-title">
-          A precisão da alfaiataria,<br><em>a arte do bem vestir.</em>
+        <!-- 2. O Nome e Atelier (Quadrado Verde): Abaixo do Desenho -->
+        <div class="hero-name-wrap" data-parallax="0.05">
+          <img src="./name_hq.png" 
+               alt="Walquiria Ruiz Atelier" 
+               class="hero-name-img"
+               id="heroName">
+        </div>
+
+        <!-- 3. Dizeres Finais: Proporcionais e Elegantes -->
+        <h1 class="hero-slogan" data-parallax="0.02">
+          A precisão da alfaiataria, a arte do bem vestir,<br>
+          <em>onde cada ponto tem intenção, elegância e história.</em>
         </h1>
 
-        <div class="needle-divider">
-          <svg class="needle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2L13 7L12 22L11 7L12 2Z" fill="currentColor"/>
-            <circle cx="12" cy="5" r="1" fill="#FAF8F5"/>
-          </svg>
-        </div>
-
-        <p class="hero-quote">
-          "Onde cada ponto tem intenção, elegância e história."
-        </p>
-
-        <div class="hero-cta-group">
+        <!-- 4. Logo que acaba os dizeres finais, entra o Agendar Consulta -->
+        <div class="hero-cta-wrap" data-parallax="-0.02">
           <a href="#contato" class="btn-luxury" id="heroBookBtn">
             Agendar Consulta
           </a>
-          <a href="#colecoes" class="btn-outline" id="heroExploreBtn">
-            Ver Coleções
+          <a href="https://wa.me/5511951312765?text=Ol%C3%A1%2C%20Walquiria!%20Gostaria%20de%20agendar%20uma%20consulta%20exclusiva%20no%20atelier." 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-whatsapp-outline" 
+             id="heroWhatsappBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.26-4.38c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.51-3.68 8.19-8.19 8.19v-.17zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            Falar no WhatsApp
           </a>
         </div>
-      </div>
 
-      <div class="scroll-indicator" aria-hidden="true">
-        <span>Deslize</span>
-        <div class="scroll-mouse">
-          <div class="scroll-dot"></div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>Explorar</span>
+          <div class="scroll-mouse">
+            <div class="scroll-dot"></div>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -161,12 +171,12 @@
         <div class="story-grid">
           
           <div class="story-imagery">
-            <div class="story-main-img-wrap">
+            <div class="story-main-img-wrap" data-parallax="-0.06">
               <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" 
-                   alt="Bancada de criação, tesoura de alfaiate e tecidos nobres" 
+                   alt="Bancada de criação com tesoura e tecidos nobres" 
                    class="story-main-img" 
                    loading="lazy">
-              <div class="story-badge">
+              <div class="story-badge" data-parallax="0.10">
                 <span>100%</span>
                 Sob Medida
               </div>
@@ -224,7 +234,7 @@
             </svg>
           </div>
           <p class="section-subtitle">
-            Peças concebidas para transcender tendências passageiras. Cada modelo pode ser adaptado ou recriado em tecido e medidas sob encomenda.
+            Peças sóbrias e atemporais concebidas para transcender tendências passageiras. Cada modelo pode ser adaptado ou recriado em tecido e medidas sob encomenda.
           </p>
         </div>
 
@@ -236,16 +246,16 @@
           <button class="tab-btn" data-filter="noivas" role="tab" aria-selected="false">Noivas & Cerimônias</button>
         </div>
 
-        <!-- Collections Grid -->
+        <!-- Collections Grid: Tons Clássicos & Sóbrios -->
         <div class="collection-grid" id="collectionGrid">
           
-          <!-- Item 1: Alfaiataria -->
+          <!-- Item 1: Alfaiataria Clássica -->
           <article class="editorial-card" data-category="alfaiataria" 
-                   data-img="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&w=1200&q=85" 
-                   data-title="Tailleur Monocromático em Lã Fria" 
-                   data-desc="Lapela em bico pontiagudo, ombreiras estruturadas e forro em cetim de seda italiano.">
+                   data-img="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Tailleur Estruturado em Lã Fria" 
+                   data-desc="Lapela em bico clássica, ombreiras estruturadas e forro em cetim de seda italiano.">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&w=800&q=80" 
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" 
                    alt="Tailleur sob medida em lã fria e corte de precisão" 
                    class="card-img" 
                    loading="lazy">
@@ -255,16 +265,16 @@
               </div>
             </div>
             <div class="card-info">
-              <h3 class="card-title">Tailleur Monocromático</h3>
+              <h3 class="card-title">Tailleur Estruturado</h3>
               <p class="card-detail">Corte milimétrico em lã fria italiana</p>
               <span class="card-tag">Sob Encomenda</span>
             </div>
           </article>
 
-          <!-- Item 2: Festa -->
+          <!-- Item 2: Festa Seda Clássica -->
           <article class="editorial-card" data-category="festa" 
                    data-img="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1200&q=85" 
-                   data-title="Gown Imperial em Seda Fluida" 
+                   data-title="Gown Imperial em Seda Champagne" 
                    data-desc="Drapeado manual sobre o busto com fenda arquitetônica e movimento etéreo.">
             <div class="card-img-wrapper">
               <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80" 
@@ -283,7 +293,7 @@
             </div>
           </article>
 
-          <!-- Item 3: Noivas -->
+          <!-- Item 3: Noivas Clássicas -->
           <article class="editorial-card" data-category="noivas" 
                    data-img="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85" 
                    data-title="Vestido de Noiva em Zibeline & Renda" 
@@ -305,13 +315,13 @@
             </div>
           </article>
 
-          <!-- Item 4: Alfaiataria -->
+          <!-- Item 4: Alfaiataria Noir -->
           <article class="editorial-card" data-category="alfaiataria" 
-                   data-img="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" 
+                   data-img="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85" 
                    data-title="Blazer Smoking Feminino Noir" 
                    data-desc="Gola xale em cetim duchesse, cintura marcada e punhos com caseado executado à mão.">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" 
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" 
                    alt="Blazer smoking feminino estruturado" 
                    class="card-img" 
                    loading="lazy">
@@ -327,7 +337,7 @@
             </div>
           </article>
 
-          <!-- Item 5: Festa -->
+          <!-- Item 5: Gala Veludo Sober -->
           <article class="editorial-card" data-category="festa" 
                    data-img="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=1200&q=85" 
                    data-title="Vestido Coluna em Veludo & Georgette" 
@@ -394,7 +404,7 @@
 
         <div class="process-timeline">
           
-          <div class="process-step">
+          <div class="process-step" data-parallax="0.03">
             <span class="step-num">01</span>
             <div class="step-header">
               <h3 class="step-title">A Consulta Privativa</h3>
@@ -404,7 +414,7 @@
             </p>
           </div>
 
-          <div class="process-step">
+          <div class="process-step" data-parallax="-0.02">
             <span class="step-num">02</span>
             <div class="step-header">
               <h3 class="step-title">Curadoria de Tecidos</h3>
@@ -414,7 +424,7 @@
             </p>
           </div>
 
-          <div class="process-step">
+          <div class="process-step" data-parallax="0.03">
             <span class="step-num">03</span>
             <div class="step-header">
               <h3 class="step-title">Modelagem & Provas</h3>
@@ -424,7 +434,7 @@
             </p>
           </div>
 
-          <div class="process-step">
+          <div class="process-step" data-parallax="-0.02">
             <span class="step-num">04</span>
             <div class="step-header">
               <h3 class="step-title">A Entrega Exclusiva</h3>

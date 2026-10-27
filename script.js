@@ -1,6 +1,6 @@
 /**
  * WALQUIRIA RUIZ ATELIER — INTERACTIVE SCRIPTS
- * Mobile-First Drawer, Category Filtering, Lightbox & WhatsApp Integration
+ * Parallax Scroll Engine, Mobile Drawer, Category Filtering, Lightbox & WhatsApp Integration
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,23 +22,62 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxDesc = document.getElementById('lightboxDesc');
   const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
 
+  // Parallax elements
+  const parallaxItems = document.querySelectorAll('[data-parallax]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // --- Dynamic Year ---
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 
   // --- 1. Sticky Header with Elevation on Scroll ---
-  const handleScroll = () => {
-    if (window.scrollY > 40) {
+  const handleHeaderScroll = () => {
+    // Only show header background and mini brand logo when scrolled past the hero area
+    if (window.scrollY > 90) {
       siteHeader.classList.add('scrolled');
     } else {
       siteHeader.classList.remove('scrolled');
     }
   };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
 
-  // --- 2. Mobile Drawer Navigation ---
+  // --- 2. Parallax Scroll Engine ---
+  if (!prefersReducedMotion && parallaxItems.length > 0) {
+    let ticking = false;
+
+    const updateParallax = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      parallaxItems.forEach(el => {
+        const speed = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+        const rect = el.getBoundingClientRect();
+        
+        // Only apply if the element is near or within the viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const relativeCenter = rect.top + rect.height / 2 - windowHeight / 2;
+          const yPos = relativeCenter * speed;
+          el.style.transform = `translate3d(0, ${yPos.toFixed(1)}px, 0)`;
+        }
+      });
+
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    requestTick();
+  }
+
+  // --- 3. Mobile Drawer Navigation ---
   const toggleMobileDrawer = (open) => {
     const shouldOpen = open !== undefined ? open : !mobileDrawer.classList.contains('active');
     
@@ -74,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 3. Category Filter Tabs ---
+  // --- 4. Category Filter Tabs ---
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filterValue = btn.getAttribute('data-filter');
@@ -107,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 4. Lightbox Modal for Editorial Portfolio ---
+  // --- 5. Lightbox Modal for Editorial Portfolio ---
   const openLightbox = (card) => {
     const imgSrc = card.getAttribute('data-img');
     const title = card.getAttribute('data-title');
@@ -152,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 5. Booking Form & WhatsApp Direct Dispatch ---
+  // --- 6. Booking Form & WhatsApp Direct Dispatch ---
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -203,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 6. Active Nav Link on Scroll ---
+  // --- 7. Active Nav Link on Scroll ---
   const sections = document.querySelectorAll('section[id]');
   const desktopNavLinks = document.querySelectorAll('.desktop-nav .nav-link');
 

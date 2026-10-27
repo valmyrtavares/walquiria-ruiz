@@ -1,28 +1,28 @@
 /* ==========================================================================
    WALQUIRIA RUIZ ATELIER — HIGH COUTURE DESIGN SYSTEM
-   Mobile-First Architecture & Editorial Luxury Aesthetics
+   Mobile-First Architecture & Classic Haute Couture Aesthetics
    ========================================================================== */
 
-/* --- Custom Properties & Palette --- */
+/* --- Custom Properties & Sober Palette --- */
 :root {
-  --color-bg: #FAF8F5;            /* Off-White / Papel Nobre Texturizado */
+  --color-bg: #FAF8F5;            /* Off-White / Papel Nobre Texturizado da Marca */
   --color-bg-card: #FFFFFF;
   --color-bg-surface: #F3EFE9;
-  --color-bg-alt: #101F33;         /* Fundo escuro editorial */
+  --color-bg-alt: #0E1B2D;         /* Fundo escuro clássico e sóbrio */
   
-  --color-navy: #0E1F38;          /* Midnight Navy do logotipo */
-  --color-navy-dark: #091424;
+  --color-navy: #0E1F38;          /* Midnight Navy do logotipo oficial */
+  --color-navy-dark: #081220;
   --color-navy-soft: #1B2F4E;
   
-  --color-gold: #C5A880;          /* Dourado Champagne / Fio de Ouro */
-  --color-gold-light: #E0C7A6;
-  --color-gold-dark: #A5875D;
-  --color-gold-subtle: rgba(197, 168, 128, 0.2);
+  --color-gold: #C5A880;          /* Dourado Champagne / Fio de Ouro da Agulha */
+  --color-gold-light: #DFCAAD;
+  --color-gold-dark: #9E7F55;
+  --color-gold-subtle: rgba(197, 168, 128, 0.22);
   
   --color-text-main: #141E28;
-  --color-text-muted: #647082;
+  --color-text-muted: #5E6977;
   --color-text-light: #F4F1EA;
-  --color-text-light-muted: #A2AFBD;
+  --color-text-light-muted: #9EABBA;
   
   --border-light: 1px solid rgba(14, 31, 56, 0.08);
   --border-gold: 1px solid rgba(197, 168, 128, 0.35);
@@ -30,12 +30,12 @@
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Garamond, Georgia, serif;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.2s ease;
+  --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.25s ease;
   
-  --shadow-subtle: 0 4px 20px rgba(14, 31, 56, 0.05);
-  --shadow-editorial: 0 16px 40px rgba(14, 31, 56, 0.1);
-  --shadow-hover: 0 20px 45px rgba(14, 31, 56, 0.14);
+  --shadow-subtle: 0 4px 20px rgba(14, 31, 56, 0.04);
+  --shadow-editorial: 0 16px 40px rgba(14, 31, 56, 0.09);
+  --shadow-hover: 0 20px 45px rgba(14, 31, 56, 0.13);
 }
 
 /* --- Reset & Global Baseline --- */
@@ -101,12 +101,12 @@ h1, h2, h3, h4, .font-serif {
 .eyebrow {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   color: var(--color-gold-dark);
   font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .needle-divider {
@@ -125,7 +125,7 @@ h1, h2, h3, h4, .font-serif {
   flex: 1;
   height: 1px;
   background: var(--color-gold);
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .needle-icon {
@@ -144,8 +144,9 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .section-spacing {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  position: relative;
 }
 
 .section-header {
@@ -166,6 +167,17 @@ h1, h2, h3, h4, .font-serif {
   margin: 0 auto;
 }
 
+/* --- Parallax Floating Watermark Accents --- */
+.parallax-watermark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  user-select: none;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
 /* --- Header & Luxury Navigation --- */
 .site-header {
   position: fixed;
@@ -175,17 +187,16 @@ h1, h2, h3, h4, .font-serif {
   z-index: 100;
   transition: var(--transition-smooth);
   padding: 1.25rem 0;
-  background: rgba(250, 248, 245, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+  background: transparent;
 }
 
 .site-header.scrolled {
   padding: 0.85rem 0;
-  background: rgba(250, 248, 245, 0.95);
-  box-shadow: var(--shadow-subtle);
-  border-bottom-color: rgba(197, 168, 128, 0.25);
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(14, 31, 56, 0.06);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.25);
 }
 
 .nav-wrapper {
@@ -194,17 +205,27 @@ h1, h2, h3, h4, .font-serif {
   justify-content: space-between;
 }
 
+/* Brand Link in Header: Hidden on top hero so it does not clutter, appears when scrolled */
 .brand-link {
   display: flex;
   align-items: center;
   gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: var(--transition-smooth);
 }
 
-.brand-logo-img {
-  height: 44px;
+.site-header.scrolled .brand-link {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.brand-emblem-mini {
+  height: 34px;
   width: auto;
   object-fit: contain;
-  transition: var(--transition-smooth);
 }
 
 .brand-text {
@@ -214,7 +235,7 @@ h1, h2, h3, h4, .font-serif {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   color: var(--color-navy);
@@ -223,8 +244,8 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .brand-tagline {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
   color: var(--color-gold-dark);
   text-transform: uppercase;
   font-weight: 400;
@@ -236,8 +257,8 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .nav-link {
-  font-size: 0.82rem;
-  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-navy);
   font-weight: 400;
@@ -273,10 +294,14 @@ h1, h2, h3, h4, .font-serif {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 38px;
-  height: 38px;
-  padding: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 6px;
   z-index: 110;
+  background: rgba(250, 248, 245, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  border-radius: 2px;
 }
 
 .burger-line {
@@ -314,6 +339,7 @@ h1, h2, h3, h4, .font-serif {
   height: 100vh;
   height: 100dvh;
   background-color: var(--color-bg);
+  background-image: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(246, 243, 238, 0.95) 100%);
   z-index: 105;
   display: flex;
   flex-direction: column;
@@ -358,7 +384,7 @@ h1, h2, h3, h4, .font-serif {
 .mobile-drawer-footer {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(197, 168, 128, 0.2);
+  border-top: 1px solid rgba(197, 168, 128, 0.25);
 }
 
 .mobile-contact-pill {
@@ -368,109 +394,110 @@ h1, h2, h3, h4, .font-serif {
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   color: var(--color-navy);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-/* --- Hero Section (Impacto & Emoção) --- */
+/* ==========================================================================
+   HERO / FRONT SECTION (SOBER, CLASSIC & VALUING THE LOGO DRAWING)
+   ========================================================================== */
 .hero-section {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 7rem 1.5rem 4rem;
+  padding: 5rem 1.5rem 3.5rem;
   overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  filter: brightness(0.92);
-  transform: scale(1.03);
-  transition: transform 8s ease-out;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(250, 248, 245, 0.82) 0%,
-    rgba(250, 248, 245, 0.6) 40%,
-    rgba(250, 248, 245, 0.92) 100%
-  );
-  z-index: 2;
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.85) 0%, rgba(246, 243, 238, 0.65) 65%, rgba(238, 235, 229, 0.95) 100%),
+    url('./paper_texture.jpg');
+  background-repeat: repeat;
+  background-size: auto, 400px 65px;
+  box-shadow: inset 0 -30px 40px rgba(14, 31, 56, 0.03);
 }
 
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 800px;
+  width: 100%;
+  max-width: 680px;
   text-align: center;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-logo-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(197, 168, 128, 0.4);
-  border-radius: 2px;
+/* 1. O Desenho / Monograma (Quadrado Vermelho): Largura e Destaque */
+.hero-emblem-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1.75rem;
-  box-shadow: 0 4px 15px rgba(14, 31, 56, 0.04);
+  will-change: transform;
 }
 
-.hero-logo-img {
-  max-height: 70px;
-  width: auto;
-  margin: 0 auto;
+.hero-emblem-img {
+  width: 74%;
+  max-width: 290px;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(14, 31, 56, 0.08));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  line-height: 1.15;
+.hero-emblem-img:hover {
+  transform: scale(1.02);
+}
+
+/* 2. O Nome e Atelier (Quadrado Verde): Abaixo do Desenho */
+.hero-name-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  will-change: transform;
+}
+
+.hero-name-img {
+  width: 94%;
+  max-width: 440px;
+  height: auto;
+  filter: drop-shadow(0 4px 14px rgba(14, 31, 56, 0.06));
+}
+
+/* 3. Dizeres Finais: Proporcionais e Refinados */
+.hero-slogan {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
   color: var(--color-navy);
-  margin-bottom: 1.5rem;
+  max-width: 520px;
+  margin: 0 auto 2.25rem;
+  opacity: 0.92;
   font-weight: 400;
+  will-change: transform;
 }
 
-.hero-title em {
+.hero-slogan em {
+  display: block;
   font-style: italic;
   font-weight: 300;
   color: var(--color-navy-soft);
+  margin-top: 0.35rem;
 }
 
-.hero-quote {
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--color-navy);
-  opacity: 0.9;
-  max-width: 580px;
-  margin: 0 auto 2.25rem;
-  line-height: 1.6;
-}
-
-.hero-cta-group {
+/* 4. Logo que acaba os dizeres, entra o Agendar Consulta */
+.hero-cta-wrap {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
+  gap: 0.85rem;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  will-change: transform;
 }
 
 .btn-luxury {
@@ -478,37 +505,36 @@ h1, h2, h3, h4, .font-serif {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 1rem 2.2rem;
+  padding: 1.05rem 2.4rem;
   font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 500;
   background-color: var(--color-navy);
-  color: var(--color-bg);
+  color: #FFFFFF;
   border: 1px solid var(--color-navy);
   border-radius: 1px;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 6px 20px rgba(14, 31, 56, 0.15);
   width: 100%;
   max-width: 320px;
 }
 
 .btn-luxury:hover {
   background-color: var(--color-navy-soft);
-  color: #FFFFFF;
   border-color: var(--color-gold);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-editorial);
+  box-shadow: 0 10px 25px rgba(14, 31, 56, 0.22);
 }
 
-.btn-outline {
+.btn-whatsapp-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   padding: 0.95rem 2rem;
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 500;
   background-color: transparent;
@@ -520,26 +546,44 @@ h1, h2, h3, h4, .font-serif {
   max-width: 320px;
 }
 
+.btn-whatsapp-outline:hover {
+  background-color: rgba(197, 168, 128, 0.12);
+  border-color: var(--color-navy);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.85rem 1.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 1px solid var(--color-gold);
+  border-radius: 1px;
+  transition: var(--transition-smooth);
+}
+
 .btn-outline:hover {
-  background-color: rgba(197, 168, 128, 0.1);
+  background-color: rgba(197, 168, 128, 0.12);
   border-color: var(--color-navy);
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   color: var(--color-gold-dark);
-  font-size: 0.68rem;
-  letter-spacing: 0.25em;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .scroll-mouse {
@@ -569,16 +613,21 @@ h1, h2, h3, h4, .font-serif {
   100% { opacity: 0; }
 }
 
-/* --- O Ateliê (História & Essência) --- */
+/* ==========================================================================
+   O ATELIÊ (HISTÓRIA & ESSÊNCIA — SÓBRIO & CLÁSSICO)
+   ========================================================================== */
 .story-section {
-  background-color: var(--color-bg);
+  background-color: #FFFFFF;
   position: relative;
+  overflow: hidden;
 }
 
 .story-grid {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .story-imagery {
@@ -587,16 +636,18 @@ h1, h2, h3, h4, .font-serif {
 
 .story-main-img-wrap {
   position: relative;
-  border: 1px solid rgba(197, 168, 128, 0.3);
+  border: 1px solid rgba(197, 168, 128, 0.35);
   padding: 0.75rem;
-  background: #FFFFFF;
+  background: var(--color-bg);
   box-shadow: var(--shadow-subtle);
+  will-change: transform;
 }
 
 .story-main-img {
   width: 100%;
   height: 380px;
   object-fit: cover;
+  filter: contrast(1.02) saturate(0.85); /* Tom editorial sóbrio */
 }
 
 .story-badge {
@@ -605,13 +656,14 @@ h1, h2, h3, h4, .font-serif {
   right: 15px;
   background-color: var(--color-navy);
   color: var(--color-gold);
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.35rem;
   font-family: var(--font-serif);
   font-size: 0.95rem;
   line-height: 1.2;
   text-align: center;
   box-shadow: var(--shadow-editorial);
   border: 1px solid var(--color-gold);
+  will-change: transform;
 }
 
 .story-badge span {
@@ -631,14 +683,14 @@ h1, h2, h3, h4, .font-serif {
   font-size: 0.98rem;
   color: var(--color-text-main);
   margin-bottom: 1.25rem;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .story-quote-box {
   margin: 1.75rem 0;
   padding: 1.5rem;
   border-left: 2px solid var(--color-gold);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-bg);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.15rem;
@@ -685,9 +737,18 @@ h1, h2, h3, h4, .font-serif {
   color: var(--color-text-muted);
 }
 
-/* --- Vitrine / Coleções (Portfólio Editorial) --- */
+/* ==========================================================================
+   VITRINE / COLEÇÕES (PALETA SÓBRIA & FOTOS CLÁSSICAS)
+   ========================================================================== */
 .collections-section {
-  background-color: #FFFFFF;
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.7) 0%, rgba(246, 243, 238, 0.5) 100%),
+    url('./paper_texture.jpg');
+  background-repeat: repeat;
+  background-size: auto, 400px 65px;
+  position: relative;
+  overflow: hidden;
 }
 
 .filter-tabs {
@@ -708,12 +769,13 @@ h1, h2, h3, h4, .font-serif {
 .tab-btn {
   white-space: nowrap;
   padding: 0.65rem 1.4rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   border: 1px solid rgba(14, 31, 56, 0.12);
   border-radius: 1px;
+  background: rgba(255, 255, 255, 0.85);
   transition: var(--transition-fast);
 }
 
@@ -728,11 +790,13 @@ h1, h2, h3, h4, .font-serif {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.25rem;
+  position: relative;
+  z-index: 2;
 }
 
 .editorial-card {
   position: relative;
-  background-color: var(--color-bg);
+  background-color: #FFFFFF;
   border: var(--border-light);
   overflow: hidden;
   transition: var(--transition-smooth);
@@ -757,18 +821,19 @@ h1, h2, h3, h4, .font-serif {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: contrast(1.02) saturate(0.9); /* Sóbrio */
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .editorial-card:hover .card-img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .card-category-badge {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: rgba(250, 248, 245, 0.9);
+  background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(8px);
   padding: 0.35rem 0.75rem;
   font-size: 0.68rem;
@@ -832,34 +897,45 @@ h1, h2, h3, h4, .font-serif {
 .card-tag {
   display: inline-block;
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-gold-dark);
   font-weight: 500;
 }
 
-/* --- A Experiência (O Processo Sob Medida) --- */
+/* ==========================================================================
+   A EXPERIÊNCIA (O PROCESSO SOB MEDIDA)
+   ========================================================================== */
 .experience-section {
-  background-color: var(--color-bg-surface);
+  background-color: #FFFFFF;
   position: relative;
+  overflow: hidden;
 }
 
 .process-timeline {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   position: relative;
+  z-index: 2;
 }
 
 .process-step {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  background: #FFFFFF;
+  gap: 1.15rem;
+  background: var(--color-bg);
   padding: 2rem 1.75rem;
   border: 1px solid rgba(197, 168, 128, 0.25);
   position: relative;
   box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.process-step:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-editorial);
 }
 
 .step-num {
@@ -886,15 +962,25 @@ h1, h2, h3, h4, .font-serif {
   line-height: 1.7;
 }
 
-/* --- Contato & Agendamento Exclusivo --- */
+/* ==========================================================================
+   CONTATO & AGENDAMENTO EXCLUSIVO
+   ========================================================================== */
 .contact-section {
   background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.75) 0%, rgba(246, 243, 238, 0.6) 100%),
+    url('./paper_texture.jpg');
+  background-repeat: repeat;
+  background-size: auto, 400px 65px;
+  position: relative;
 }
 
 .contact-layout {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info-card {
@@ -1001,7 +1087,7 @@ h1, h2, h3, h4, .font-serif {
 
 .form-label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-navy);
@@ -1071,12 +1157,15 @@ textarea.form-control {
   display: block;
 }
 
-/* --- Rodapé Editorial --- */
+/* ==========================================================================
+   RODAPÉ EDITORIAL
+   ========================================================================== */
 .site-footer {
   background-color: var(--color-navy-dark);
   color: #FFFFFF;
-  padding: 4rem 1.5rem 2rem;
+  padding: 4.5rem 1.5rem 2.25rem;
   border-top: 2px solid var(--color-gold);
+  position: relative;
 }
 
 .footer-top {
@@ -1254,11 +1343,11 @@ textarea.form-control {
    ========================================================================== */
 
 @media (min-width: 640px) {
-  .hero-cta-group {
+  .hero-cta-wrap {
     flex-direction: row;
   }
   
-  .btn-luxury, .btn-outline {
+  .btn-luxury, .btn-whatsapp-outline {
     width: auto;
   }
   
@@ -1276,11 +1365,17 @@ textarea.form-control {
     font-size: 2.85rem;
   }
   
-  .hero-title {
-    font-size: 3.5rem;
+  .hero-emblem-img {
+    width: 60%;
+    max-width: 320px;
+  }
+
+  .hero-name-img {
+    width: 85%;
+    max-width: 500px;
   }
   
-  .hero-quote {
+  .hero-slogan {
     font-size: 1.25rem;
   }
   
@@ -1326,13 +1421,25 @@ textarea.form-control {
   .burger-btn {
     display: none;
   }
-  
-  .hero-section {
-    padding-top: 8rem;
+
+  .site-header {
+    padding: 1.5rem 0;
   }
   
-  .hero-title {
-    font-size: 4rem;
+  .hero-section {
+    padding: 7rem 2rem 4rem;
+  }
+  
+  .hero-emblem-img {
+    max-width: 350px;
+  }
+
+  .hero-name-img {
+    max-width: 560px;
+  }
+
+  .hero-slogan {
+    font-size: 1.35rem;
   }
   
   .collection-grid {
