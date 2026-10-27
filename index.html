@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Walquiria Ruiz Atelier | Alta Costura & Alfaiataria Sob Medida</title>
+  
+  <meta name="description" content="A precisão da alfaiataria, a arte do bem vestir, onde cada ponto tem intenção, elegância e história. Atendimento exclusivo sob agendamento.">
+  <meta name="keywords" content="Walquiria Ruiz, Atelier, Alta Costura, Alfaiataria Feminina, Vestidos Sob Medida, Noivas, Moda Exclusiva">
+  <meta name="author" content="Walquiria Ruiz Atelier">
+  
+  <!-- Open Graph / Redes Sociais & WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Walquiria Ruiz Atelier | Alta Costura Sob Medida">
+  <meta property="og:description" content="A precisão da alfaiataria, a arte do bem vestir. Conheça as coleções exclusivas e agende sua consulta privativa.">
+  <meta property="og:image" content="./WalquiriaRuiz.jpeg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./WalquiriaRuiz.jpeg">
+  <link rel="apple-touch-icon" href="./WalquiriaRuiz.jpeg">
+  
+  <!-- Google Fonts: Cormorant Garamond (Alta Costura) & Montserrat (Minimalismo Moderno) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & LUXURY NAV ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-link" aria-label="Walquiria Ruiz Atelier - Início">
+        <img src="./WalquiriaRuiz.jpeg" alt="Logotipo Walquiria Ruiz Atelier" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">Walquiria Ruiz</span>
+          <span class="brand-tagline">Atelier & Alfaiataria</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Navegação Principal">
+        <a href="#home" class="nav-link active">Início</a>
+        <a href="#atelie" class="nav-link">O Ateliê</a>
+        <a href="#colecoes" class="nav-link">Coleções</a>
+        <a href="#experiencia" class="nav-link">A Experiência</a>
+        <a href="#contato" class="nav-link">Agendamento</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- WhatsApp Quick Action for Desktop/Tablet -->
+        <a href="https://wa.me/5511951312765?text=Ol%C3%A1%2C%20Walquiria!%20Gostaria%20de%20agendar%20um%20atendimento%20exclusivo%20no%20atelier." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-outline" 
+           id="headerCtaBtn"
+           style="display: none; padding: 0.5rem 1.25rem; font-size: 0.72rem;">
+          Agendar
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="burger-btn" id="burgerBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE DRAWER MENU ==================== -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="needle-divider" style="margin-top: 1rem;">
+      <svg class="needle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2L13 7L12 22L11 7L12 2Z" fill="currentColor"/>
+        <circle cx="12" cy="5" r="1" fill="#FAF8F5"/>
+      </svg>
+    </div>
+
+    <nav aria-label="Menu Mobile">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link" data-close-drawer>Início</a></li>
+        <li><a href="#atelie" class="mobile-nav-link" data-close-drawer>O Ateliê</a></li>
+        <li><a href="#colecoes" class="mobile-nav-link" data-close-drawer>Coleções</a></li>
+        <li><a href="#experiencia" class="mobile-nav-link" data-close-drawer>A Experiência</a></li>
+        <li><a href="#contato" class="mobile-nav-link" data-close-drawer>Agendamento</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-contact-pill">
+        <span>Atendimento com hora marcada</span>
+      </div>
+      <a href="https://wa.me/5511951312765?text=Ol%C3%A1%2C%20Walquiria!%20Gostaria%20de%20agendar%20uma%20consulta%20exclusiva%20no%20atelier." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn-luxury" 
+         style="width: 100%;">
+        Conversar no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION (FULL SCREEN) ==================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-background">
+        <!-- Imagem editorial de modelo em alta costura com corte impecável -->
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85" 
+             alt="Editorial de moda alta costura e alfaiataria" 
+             class="hero-bg-img" 
+             id="heroBgImage">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-logo-badge">
+          <img src="./WalquiriaRuiz.jpeg" alt="Walquiria Ruiz Atelier" class="hero-logo-img">
+        </div>
+
+        <span class="eyebrow">Haute Couture & Bespoke Tailoring</span>
+        
+        <h1 class="hero-title">
+          A precisão da alfaiataria,<br><em>a arte do bem vestir.</em>
+        </h1>
+
+        <div class="needle-divider">
+          <svg class="needle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L13 7L12 22L11 7L12 2Z" fill="currentColor"/>
+            <circle cx="12" cy="5" r="1" fill="#FAF8F5"/>
+          </svg>
+        </div>
+
+        <p class="hero-quote">
+          "Onde cada ponto tem intenção, elegância e história."
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#contato" class="btn-luxury" id="heroBookBtn">
+            Agendar Consulta
+          </a>
+          <a href="#colecoes" class="btn-outline" id="heroExploreBtn">
+            Ver Coleções
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Deslize</span>
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== O ATELIÊ (HISTÓRIA & ESSÊNCIA) ==================== -->
+    <section class="story-section section-spacing" id="atelie">
+      <div class="container">
+        <div class="story-grid">
+          
+          <div class="story-imagery">
+            <div class="story-main-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Bancada de criação, tesoura de alfaiate e tecidos nobres" 
+                   class="story-main-img" 
+                   loading="lazy">
+              <div class="story-badge">
+                <span>100%</span>
+                Sob Medida
+              </div>
+            </div>
+          </div>
+
+          <div class="story-content">
+            <span class="eyebrow">A Alma do Trabalho</span>
+            <h2 class="section-title">Onde a alfaiataria encontra a sensibilidade feminina.</h2>
+            
+            <p class="story-p">
+              Fundado pela estilista <strong>Walquiria Ruiz</strong>, o atelier nasce do profundo respeito pelas técnicas tradicionais da alta costura e pela busca incansável do caimento impecável.
+            </p>
+
+            <div class="story-quote-box">
+              "Vestir sob medida não é sobre preencher medidas corporais, mas esculpir uma silhueta que traduza a sua mais autêntica sofisticação."
+            </div>
+
+            <p class="story-p">
+              Cada criação é desenvolvida de forma singular. Não trabalhamos com produção seriada: cada forro de seda pura, cada entretela trabalhada à mão e cada botão encapado contam uma história feita exclusivamente para quem a veste.
+            </p>
+
+            <ul class="story-values-list">
+              <li class="value-item">
+                <div class="value-bullet">✦</div>
+                <div>
+                  <h3 class="value-title">Curadoria Têxtil Exclusiva</h3>
+                  <p class="value-desc">Lãs frias italianas, crepes de seda pura, zibelines e rendas francesas de origem nobre.</p>
+                </div>
+              </li>
+              <li class="value-item">
+                <div class="value-bullet">✦</div>
+                <div>
+                  <h3 class="value-title">Modelagem Anatômica Manual</h3>
+                  <p class="value-desc">Desenho geométrico adaptado à singularidade e ao conforto de cada movimento.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VITRINE / COLEÇÕES (PORTFÓLIO) ==================== -->
+    <section class="collections-section section-spacing" id="colecoes">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Portfólio Editorial</span>
+          <h2 class="section-title">Vitrine de Criações</h2>
+          <div class="needle-divider">
+            <svg class="needle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L13 7L12 22L11 7L12 2Z" fill="currentColor"/>
+              <circle cx="12" cy="5" r="1" fill="#FAF8F5"/>
+            </svg>
+          </div>
+          <p class="section-subtitle">
+            Peças concebidas para transcender tendências passageiras. Cada modelo pode ser adaptado ou recriado em tecido e medidas sob encomenda.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Filtrar Categorias de Roupas">
+          <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">Todas as Peças</button>
+          <button class="tab-btn" data-filter="alfaiataria" role="tab" aria-selected="false">Alfaiataria Feminina</button>
+          <button class="tab-btn" data-filter="festa" role="tab" aria-selected="false">Sob Medida & Festa</button>
+          <button class="tab-btn" data-filter="noivas" role="tab" aria-selected="false">Noivas & Cerimônias</button>
+        </div>
+
+        <!-- Collections Grid -->
+        <div class="collection-grid" id="collectionGrid">
+          
+          <!-- Item 1: Alfaiataria -->
+          <article class="editorial-card" data-category="alfaiataria" 
+                   data-img="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Tailleur Monocromático em Lã Fria" 
+                   data-desc="Lapela em bico pontiagudo, ombreiras estruturadas e forro em cetim de seda italiano.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&w=800&q=80" 
+                   alt="Tailleur sob medida em lã fria e corte de precisão" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Alfaiataria</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Tailleur Monocromático</h3>
+              <p class="card-detail">Corte milimétrico em lã fria italiana</p>
+              <span class="card-tag">Sob Encomenda</span>
+            </div>
+          </article>
+
+          <!-- Item 2: Festa -->
+          <article class="editorial-card" data-category="festa" 
+                   data-img="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Gown Imperial em Seda Fluida" 
+                   data-desc="Drapeado manual sobre o busto com fenda arquitetônica e movimento etéreo.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80" 
+                   alt="Vestido longo de gala em seda fluida alta costura" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Sob Medida & Festa</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Gown Imperial em Seda</h3>
+              <p class="card-detail">Drapeado manual com caimento etéreo</p>
+              <span class="card-tag">Exclusividade Única</span>
+            </div>
+          </article>
+
+          <!-- Item 3: Noivas -->
+          <article class="editorial-card" data-category="noivas" 
+                   data-img="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Vestido de Noiva em Zibeline & Renda" 
+                   data-desc="Corpete estruturado com barbatanas francesas, saia em A clássica e botões forrados artesanalmente.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                   alt="Vestido de noiva sob medida de alta costura" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Noivas</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Noiva Zibeline & Renda</h3>
+              <p class="card-detail">Corpete estruturado e botões forrados à mão</p>
+              <span class="card-tag">Alta Costura Cerimonial</span>
+            </div>
+          </article>
+
+          <!-- Item 4: Alfaiataria -->
+          <article class="editorial-card" data-category="alfaiataria" 
+                   data-img="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Blazer Smoking Feminino Noir" 
+                   data-desc="Gola xale em cetim duchesse, cintura marcada e punhos com caseado executado à mão.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" 
+                   alt="Blazer smoking feminino estruturado" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Alfaiataria</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Smoking Feminino Noir</h3>
+              <p class="card-detail">Gola xale em cetim e punhos com caseado manual</p>
+              <span class="card-tag">Sob Encomenda</span>
+            </div>
+          </article>
+
+          <!-- Item 5: Festa -->
+          <article class="editorial-card" data-category="festa" 
+                   data-img="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Vestido Coluna em Veludo & Georgette" 
+                   data-desc="Contraste de texturas nobres, decote nas costas e fenda discreta de alta mobilidade.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=800&q=80" 
+                   alt="Vestido de gala em veludo e corte coluna" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Sob Medida & Festa</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Coluna Veludo & Georgette</h3>
+              <p class="card-detail">Equilíbrio sóbrio entre imponência e fluidez</p>
+              <span class="card-tag">Exclusividade Única</span>
+            </div>
+          </article>
+
+          <!-- Item 6: Noivas & Cerimônias -->
+          <article class="editorial-card" data-category="noivas" 
+                   data-img="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=1200&q=85" 
+                   data-title="Capa Cerimonial em Tule Francês" 
+                   data-desc="Bordados lineares pontuados com micro-pérolas e acabamento invisível.">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=800&q=80" 
+                   alt="Capa cerimonial bordada em micro-pérolas" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-category-badge">Noivas</span>
+              <div class="card-overlay-action">
+                <span class="btn-view-piece">Ver Detalhes</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Capa Cerimonial em Tule</h3>
+              <p class="card-detail">Micro-pérolas aplicadas e transparência pura</p>
+              <span class="card-tag">Alta Costura Cerimonial</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== A EXPERIÊNCIA SOB MEDIDA ==================== -->
+    <section class="experience-section section-spacing" id="experiencia">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">O Ritual de Criação</span>
+          <h2 class="section-title">A Experiência Sob Medida</h2>
+          <div class="needle-divider">
+            <svg class="needle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L13 7L12 22L11 7L12 2Z" fill="currentColor"/>
+              <circle cx="12" cy="5" r="1" fill="#FAF8F5"/>
+            </svg>
+          </div>
+          <p class="section-subtitle">
+            Do primeiro traço ao último ajuste, cada etapa é desenhada para ser um momento de contemplação, acolhimento e precisão.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-header">
+              <h3 class="step-title">A Consulta Privativa</h3>
+            </div>
+            <p class="step-text">
+              Em um ambiente reservado com café ou espumante, Walquiria Ruiz compreende o seu desejo, a ocasião de uso e estuda as proporções anatômicas exclusivas do seu corpo.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-header">
+              <h3 class="step-title">Curadoria de Tecidos</h3>
+            </div>
+            <p class="step-text">
+              Apresentação de amostras físicas de tecidos nobres, toques de seda, cartelas de cores raras e definição do croqui personalizado.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-header">
+              <h3 class="step-title">Modelagem & Provas</h3>
+            </div>
+            <p class="step-text">
+              A peça é talhada e alfinetada diretamente sobre você em até duas ou três sessões de prova minuciosa, garantindo conforto e caimento cirúrgico.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-header">
+              <h3 class="step-title">A Entrega Exclusiva</h3>
+            </div>
+            <p class="step-text">
+              Sua obra de arte é entregue em capa personalizada de proteção, etiquetada com sua assinatura e pronta para viver momentos inesquecíveis.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO / AGENDAMENTO ==================== -->
+    <section class="contact-section section-spacing" id="contato">
+      <div class="container">
+        
+        <div class="contact-layout">
+          
+          <!-- Card Exclusivo do Atelier -->
+          <div class="contact-info-card">
+            <span class="eyebrow">Atendimento Exclusivo</span>
+            <h2 class="section-title">Agende sua Visita</h2>
+            <p class="contact-direct-p">
+              Para garantir total privacidade e dedicação integral de Walquiria Ruiz, todos os atendimentos são realizados exclusivamente com horário pré-agendado.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div>
+                  <div class="method-label">Espaço Privativo</div>
+                  <div class="method-value">Atelier Walquiria Ruiz<br>São Paulo, SP</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <div>
+                  <div class="method-label">Horários</div>
+                  <div class="method-value">Segunda a Sexta: 09h às 19h<br>Sábados: Sob consulta prévia</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <div>
+                  <div class="method-label">Canal Direto</div>
+                  <div class="method-value">Concierge WhatsApp Oficial</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Conversion Button -->
+            <a href="https://wa.me/5511951312765?text=Ol%C3%A1%2C%20Walquiria!%20Gostaria%20de%20solicitar%20um%20agendamento%20para%20uma%20consulta%20sob%20medida." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-whatsapp-direct" 
+               id="whatsappDirectBtn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.26-4.38c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.51-3.68 8.19-8.19 8.19v-.17zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              Falar com o Concierge
+            </a>
+          </div>
+
+          <!-- Formulário Elegante de Agendamento -->
+          <div class="booking-form-wrap">
+            <h3 class="booking-form-title">Solicitar Consulta</h3>
+            <p class="booking-form-subtitle">Preencha seus dados para receber um contato personalizado via WhatsApp com os horários disponíveis.</p>
+
+            <form id="bookingForm" novalidate>
+              <div class="form-group">
+                <label for="userName" class="form-label">Nome Completo</label>
+                <input type="text" id="userName" name="name" class="form-control" placeholder="Como prefere ser chamada(o)?" required>
+              </div>
+
+              <div class="form-group">
+                <label for="userWhatsapp" class="form-label">WhatsApp com DDD</label>
+                <input type="tel" id="userWhatsapp" name="whatsapp" class="form-control" placeholder="(11) 90000-0000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pieceType" class="form-label">Criação Desejada</label>
+                <select id="pieceType" name="pieceType" class="form-control">
+                  <option value="Alfaiataria Feminina (Blazer / Terno)">Alfaiataria Feminina (Blazer / Terno / Calça)</option>
+                  <option value="Vestido Sob Medida / Noite & Gala">Vestido Sob Medida / Noite & Gala</option>
+                  <option value="Vestido de Noiva / Cerimonial">Vestido de Noiva / Cerimonial</option>
+                  <option value="Guarda-Roupa Cápsula Exclusivo">Guarda-Roupa Cápsula Exclusivo</option>
+                  <option value="Outra Criação Especial">Outra Criação Especial</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredDate" class="form-label">Previsão ou Data do Evento</label>
+                <input type="date" id="preferredDate" name="preferredDate" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="userNotes" class="form-label">Observações ou Inspirações (Opcional)</label>
+                <textarea id="userNotes" name="notes" class="form-control" placeholder="Conte brevemente sobre a ocasião, tecidos de sua preferência ou expectativas..."></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn" id="submitBookingBtn">
+                Confirmar Solicitação de Horário
+              </button>
+
+              <div class="form-feedback" id="formFeedback"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">Walquiria Ruiz</div>
+          <p class="footer-brand-slogan">"A precisão da alfaiataria, a arte do bem vestir, onde cada ponto tem intenção, elegância e história."</p>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram Walquiria Ruiz">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5511951312765" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp Direto">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Walquiria Ruiz Atelier. Todos os direitos reservados.</p>
+        <p>Alta Costura & Alfaiataria Feminina Sob Medida.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <a href="https://wa.me/5511951312765?text=Ol%C3%A1%2C%20Walquiria!%20Gostaria%20de%20agendar%20um%20atendimento%20exclusivo%20no%20atelier." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp" 
+     id="floatingWhatsappBtn" 
+     aria-label="Falar pelo WhatsApp com Walquiria Ruiz Atelier">
+    <div class="whatsapp-pulse"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.26-4.38c0-4.51 3.67-8.18 8.19-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.51-3.68 8.19-8.19 8.19v-.17zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+    </svg>
+  </a>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Fechar Visualização">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption">
+        <h4 class="lightbox-title" id="lightboxTitle"></h4>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./script.js"></script>
+</body>
+</html>
